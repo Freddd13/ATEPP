@@ -212,7 +212,8 @@ def inference(args):
     """Split audio to multiple 10-second segments for inference"""
 
     # Paths
-    midi_path = 'results/{}.mid'.format(get_filename(audio_path))
+    midi_path = "{}.mid".format(get_filename(audio_path))
+    print(midi_path)
     create_folder(os.path.dirname(midi_path))
 
     # Transcriptor

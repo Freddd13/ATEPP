@@ -1,4 +1,16 @@
+Note: Running pass on torch 1.7.1 and requirements in piano-transcription-master/pip.txt.
+
+It seems there's some bug of miniconda on windows when using powershell7 and cmd. We may need to deactivate and reactivate the env. To ensure the correct installation,  it's a good choice to check that the python lib paths of current env are included using sys in the terminal python.
+
+```bash
+#memo
+python pytorch/inference.py --model_type Regress_onset_offset_frame_velocity_CRNN --checkpoint_path "300000_iterations.pth" --audio_path "C:/Users/Fred/Desktop/arr_April/speed_grapher/追忆.m4a" --cuda
+```
+
+
+
 # ATEPP: A Dataset of Automatically Transcribed Expressive Piano Performances
+
 ATEPP is a dataset of expressive piano performances by virtuoso pianists. The dataset contains ~~11742~~ 11677 performances (~1000 hours) by 49 pianists and covers 1580 movements by 25 composers. All of the MIDI files in the dataset come from the piano transcription of existing audio recordings of piano performances. Scores in MusicXML format are also available for around half of the tracks. The dataset is organized and aligned by compositions and movements for comparative studies. More details are presented in the [paper](https://archives.ismir.net/ismir2022/paper/000053.pdf). 
 
 # Downloade the ATEPP dataset
